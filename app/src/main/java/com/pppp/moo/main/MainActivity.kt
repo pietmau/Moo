@@ -2,10 +2,13 @@ package com.pppp.moo.main
 
 import android.os.Bundle
 import android.view.ViewGroup
+import com.badoo.mvicore.android.AndroidTimeCapsule
 import com.badoo.ribs.android.RibActivity
 import com.badoo.ribs.core.Rib
 import com.badoo.ribs.core.builder.BuildContext
 import com.pppp.moo.R
+import com.pppp.moo.main.tabbed_switcher.TabbedSwitcher
+import com.pppp.moo.main.tabbed_switcher.builder.TabbedSwitcherBuilder
 
 class MainActivity : RibActivity() {
 
@@ -18,6 +21,12 @@ class MainActivity : RibActivity() {
 
     }
 
-    override fun createRib(savedInstanceState: Bundle?): Rib = TODO()
+    override fun createRib(savedInstanceState: Bundle?): Rib =
+        TabbedSwitcherBuilder(object : TabbedSwitcher.Dependency {})
+            .build(BuildContext.root(savedInstanceState), TabbedSwitcherBuilder.Params("Foo"))
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+    }
 
 }

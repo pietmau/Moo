@@ -10,7 +10,7 @@ class TabbedSwitcherBuilder(
 ) : Builder<Params, TabbedSwitcher>() {
 
     data class Params(
-        val someField: Int
+        val someField: Any
     )
 
     override fun build(buildParams: BuildParams<Params>): TabbedSwitcher =

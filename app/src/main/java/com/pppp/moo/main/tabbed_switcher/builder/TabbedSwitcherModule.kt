@@ -8,7 +8,6 @@ import com.pppp.moo.main.tabbed_switcher.TabbedSwitcherInteractor
 import com.pppp.moo.main.tabbed_switcher.TabbedSwitcherNode
 import com.pppp.moo.main.tabbed_switcher.routing.TabbedSwitcherRouter
 import com.pppp.moo.main.tabbed_switcher.routing.TabbedSwitcherRouter.Configuration
-import com.pppp.moo.main.tabbed_switcher.routing.TabbedSwitcherRouter.Configuration.Content
 import com.pppp.moo.main.tabbed_switcher.builder.TabbedSwitcherBuilder.Params
 import com.pppp.moo.main.tabbed_switcher.feature.TabbedSwitcherFeature
 import com.pppp.moo.main.tabbed_switcher.routing.TabbedSwitcherChildBuilders
@@ -31,7 +30,7 @@ internal object TabbedSwitcherModule {
     ): BackStackFeature<Configuration> =
         BackStackFeature(
             buildParams = buildParams,
-            initialConfiguration = Content.Default
+            initialConfiguration = Configuration.Permanent
         )
 
     @TabbedSwitcherScope

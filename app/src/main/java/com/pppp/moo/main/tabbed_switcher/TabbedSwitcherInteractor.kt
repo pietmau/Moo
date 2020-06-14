@@ -27,16 +27,16 @@ internal class TabbedSwitcherInteractor(
 
     override fun onAttach(nodeLifecycle: Lifecycle) {
         nodeLifecycle.createDestroy {
-            bind(feature.news to rib.output using NewsToOutput)
-            bind(rib.input to feature using InputToWish)
+            //bind(feature.news to rib.output using NewsToOutput)
+            //bind(rib.input to feature using InputToWish)
         }
     }
 
     override fun onViewCreated(view: TabbedSwitcherView, viewLifecycle: Lifecycle) {
         viewLifecycle.startStop {
-            bind(feature to view using StateToViewModel)
-            bind(view to feature using ViewEventToWish)
-            bind(view to TabbedSwitcherAnalytics using ViewEventToAnalyticsEvent)
+            //bind(feature to view using StateToViewModel)
+            //bind(view to feature using ViewEventToWish)
+            //bind(view to TabbedSwitcherAnalytics using ViewEventToAnalyticsEvent)
         }
     }
 }
