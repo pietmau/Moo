@@ -11,9 +11,10 @@ import com.pppp.moo.main.tabbed_switcher.feature.TabbedSwitcherFeature.State
 import com.pppp.moo.main.tabbed_switcher.feature.TabbedSwitcherFeature.Wish
 import io.reactivex.Observable
 import io.reactivex.Observable.empty
+import io.reactivex.Observable.just
 
 internal class TabbedSwitcherFeature : ActorReducerFeature<Wish, Effect, State, News>(
-    initialState = State(),
+    initialState = State("Initial state"),
     bootstrapper = BootStrapperImpl(),
     actor = ActorImpl(),
     reducer = ReducerImpl(),
@@ -21,28 +22,35 @@ internal class TabbedSwitcherFeature : ActorReducerFeature<Wish, Effect, State, 
 ) {
 
     data class State(
-        val yourData: Any? = null
+        val yourData: String
     )
 
-    sealed class Wish
+    sealed class Wish {
+        object Initial : Wish()
+    }
 
-    sealed class Effect
+    sealed class Effect {
+        object Initial : Effect()
+    }
 
     sealed class News
 
     class BootStrapperImpl : Bootstrapper<Wish> {
-        override fun invoke(): Observable<Wish> =
-            empty()
+        override fun invoke(): Observable<Wish> {
+            return just(Wish.Initial)
+        }
     }
 
     class ActorImpl : Actor<State, Wish, Effect> {
-        override fun invoke(state: State, wish: Wish): Observable<Effect> =
-            empty()
+        override fun invoke(state: State, wish: Wish): Observable<Effect> {
+            return just(Effect.Initial)
+        }
     }
 
     class ReducerImpl : Reducer<State, Effect> {
-        override fun invoke(state: State, effect: Effect): State =
-            state
+        override fun invoke(state: State, effect: Effect): State {
+            return state.copy(state.yourData + " I ")
+        }
     }
 
     class NewsPublisherImpl : NewsPublisher<Wish, Effect, State, News> {

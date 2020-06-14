@@ -40,3 +40,13 @@ y
 Iapp/src/main/java/com/pppp/moo/main/tabbed_switcher/TabbedSwitcherView.kt,d/e/de660853805f1cf275af9254376a933595b6b234
 d
 4app/src/main/java/com/pppp/moo/main/tabs/TabsView.kt,0/2/020fab71164160076162c29f45374d835396818e
+o
+?app/src/main/java/com/pppp/moo/main/tabs/mapper/NewsToOutput.kt,9/d/9d190328d9934c72be28ae3de069f891d4de9a99
+n
+>app/src/main/java/com/pppp/moo/main/tabs/mapper/InputToWish.kt,2/2/22982233862d324e1568177b5b7014efd612cd10
+d
+4app/src/main/java/com/pppp/moo/main/tabs/TabsNode.kt,4/9/497ba99e236e0afcbe9f9ac1f8bb0e4491420d85
+o
+?app/src/main/java/com/pppp/moo/main/tabs/feature/TabsFeature.kt,0/a/0af0004449542f9339d8f32ab25800a9eac60314
+„
+Tapp/src/main/java/com/pppp/moo/main/tabbed_switcher/feature/TabbedSwitcherFeature.kt,a/7/a76f2cf95a42f5dd974aeae2ea4789802c790902

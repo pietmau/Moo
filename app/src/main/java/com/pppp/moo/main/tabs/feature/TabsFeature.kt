@@ -17,7 +17,7 @@ import io.reactivex.Observable.just
 import kotlinx.android.parcel.Parcelize
 
 internal class TabsFeature(timeCapsule: TimeCapsule<Parcelable>) : ActorReducerFeature<Wish, Effect, State, News>(
-    initialState = timeCapsule?.get(TabsFeature::class.java) ?: State("intilial styate"),
+    initialState = State("intilial styate"),
     bootstrapper = BootStrapperImpl(),
     actor = ActorImpl(),
     reducer = ReducerImpl(),
@@ -36,10 +36,6 @@ internal class TabsFeature(timeCapsule: TimeCapsule<Parcelable>) : ActorReducerF
     data class Effect(val data: String = "")
 
     sealed class News
-
-    init {
-        timeCapsule.register(TabsFeature::class.java) { state }
-    }
 
     class BootStrapperImpl : Bootstrapper<Wish> {
         override fun invoke(): Observable<Wish> {

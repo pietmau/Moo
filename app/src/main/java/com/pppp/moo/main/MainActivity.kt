@@ -25,8 +25,4 @@ class MainActivity : RibActivity() {
         TabbedSwitcherBuilder(object : TabbedSwitcher.Dependency {})
             .build(BuildContext.root(savedInstanceState), TabbedSwitcherBuilder.Params("Foo"))
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-    }
-
 }
