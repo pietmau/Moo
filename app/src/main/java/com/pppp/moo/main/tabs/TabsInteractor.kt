@@ -31,8 +31,8 @@ internal class TabsInteractor(
 
     override fun onViewCreated(view: TabsView, viewLifecycle: Lifecycle) {
         viewLifecycle.startStop {
-            //bind(feature to view using StateToViewModel)
-            //bind(view to feature using ViewEventToWish)
+            bind(feature to view using StateToViewModel)
+            bind(view to feature using ViewEventToWish)
             //bind(view to TabsAnalytics using ViewEventToAnalyticsEvent)
         }
     }

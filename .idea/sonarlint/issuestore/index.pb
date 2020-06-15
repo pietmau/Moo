@@ -50,3 +50,11 @@ o
 ?app/src/main/java/com/pppp/moo/main/tabs/feature/TabsFeature.kt,0/a/0af0004449542f9339d8f32ab25800a9eac60314
 „
 Tapp/src/main/java/com/pppp/moo/main/tabbed_switcher/feature/TabbedSwitcherFeature.kt,a/7/a76f2cf95a42f5dd974aeae2ea4789802c790902
+|
+Lapp/src/main/java/com/pppp/moo/main/tabs/mapper/ViewEventToAnalyticsEvent.kt,7/f/7f79ac5aca2a1100c1b6e1c764e6d93eb33d38a4
+r
+Bapp/src/main/java/com/pppp/moo/main/tabs/mapper/ViewEventToWish.kt,6/9/6942c81ac7fc08afede9d95412d156a9f845f47a
+}
+Mapp/src/main/java/com/pppp/moo/main/tabbed_switcher/mapper/ViewEventToWish.kt,c/c/cc7f0d1630a1fed53cab51e91829632d1e1b5a8f
+†
+Vapp/src/main/java/com/pppp/moo/main/tabbed_switcher/builder/TabbedSwitcherComponent.kt,7/2/72e32fdc683113d937b4c360eaa7c3d03e4e9aa7

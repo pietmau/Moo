@@ -5,6 +5,5 @@ import com.pppp.moo.main.tabbed_switcher.feature.TabbedSwitcherFeature.Wish
 
 internal object ViewEventToWish : (Event) -> Wish? {
 
-    override fun invoke(event: Event): Wish? =
-        TODO("Implement TabbedSwitcherViewEventToWish mapping")
+    override fun invoke(event: Event): Wish? = Wish.Initial
 }

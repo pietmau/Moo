@@ -5,6 +5,5 @@ import com.pppp.moo.main.tabs.feature.TabsFeature.State
 
 internal object StateToViewModel : (State) -> ViewModel {
 
-    override fun invoke(state: State): ViewModel =
-        TODO("Implement StateToViewModel mapping")
+    override fun invoke(state: State): ViewModel = ViewModel(0)
 }

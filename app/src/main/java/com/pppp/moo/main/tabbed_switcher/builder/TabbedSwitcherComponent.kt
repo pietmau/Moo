@@ -1,6 +1,9 @@
 package com.pppp.moo.main.tabbed_switcher.builder
 
+import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.badoo.ribs.core.builder.BuildParams
+import com.pppp.moo.main.pager.Pager
 import com.pppp.moo.main.tabbed_switcher.TabbedSwitcher
 import com.pppp.moo.main.tabbed_switcher.TabbedSwitcherNode
 import dagger.BindsInstance

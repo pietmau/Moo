@@ -34,8 +34,8 @@ internal class TabbedSwitcherInteractor(
 
     override fun onViewCreated(view: TabbedSwitcherView, viewLifecycle: Lifecycle) {
         viewLifecycle.startStop {
-            //bind(feature to view using StateToViewModel)
-            //bind(view to feature using ViewEventToWish)
+            bind(feature to view using StateToViewModel)
+            bind(view to feature using ViewEventToWish)
             //bind(view to TabbedSwitcherAnalytics using ViewEventToAnalyticsEvent)
         }
     }

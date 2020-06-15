@@ -6,6 +6,5 @@ import com.pppp.moo.main.tabs.analytics.TabsAnalytics.Event.ViewEvent
 
 internal object ViewEventToAnalyticsEvent : (Event) -> TabsAnalytics.Event? {
 
-    override fun invoke(event: Event): TabsAnalytics.Event? =
-        ViewEvent(event)
+    override fun invoke(event: Event): TabsAnalytics.Event? = ViewEvent(event)
 }

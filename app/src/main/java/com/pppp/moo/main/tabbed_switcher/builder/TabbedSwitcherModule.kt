@@ -1,4 +1,5 @@
 @file:SuppressWarnings("LongParameterList", "LongMethod")
+
 package com.pppp.moo.main.tabbed_switcher.builder
 
 import com.badoo.ribs.core.builder.BuildParams
@@ -19,8 +20,7 @@ internal object TabbedSwitcherModule {
     @TabbedSwitcherScope
     @Provides
     @JvmStatic
-    internal fun feature(): TabbedSwitcherFeature =
-        TabbedSwitcherFeature()
+    internal fun feature(): TabbedSwitcherFeature = TabbedSwitcherFeature()
 
     @TabbedSwitcherScope
     @Provides
@@ -44,7 +44,7 @@ internal object TabbedSwitcherModule {
     ): TabbedSwitcherInteractor =
         TabbedSwitcherInteractor(
             buildParams = buildParams,
-            backStack= backStack,
+            backStack = backStack,
             feature = feature
         )
 
@@ -82,7 +82,7 @@ internal object TabbedSwitcherModule {
         customisation: TabbedSwitcher.Customisation,
         interactor: TabbedSwitcherInteractor,
         router: TabbedSwitcherRouter
-    ) : TabbedSwitcherNode = TabbedSwitcherNode(
+    ): TabbedSwitcherNode = TabbedSwitcherNode(
         buildParams = buildParams,
         viewFactory = customisation.viewFactory(null),
         plugins = listOf(interactor, router)

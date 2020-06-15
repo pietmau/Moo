@@ -5,6 +5,5 @@ import com.pppp.moo.main.tabs.feature.TabsFeature.Wish
 
 internal object ViewEventToWish : (Event) -> Wish? {
 
-    override fun invoke(event: Event): Wish? =
-        TODO("Implement TabsViewEventToWish mapping")
+    override fun invoke(event: Event): Wish? = Wish.Bar
 }
