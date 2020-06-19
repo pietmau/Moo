@@ -23,7 +23,7 @@ interface TabbedSwitcherView : RibView,
     sealed class Event
 
     data class ViewModel(
-        val i: Int = 0
+        val i: String = ""
     )
 
     interface Factory : ViewFactory<Nothing?, TabbedSwitcherView>

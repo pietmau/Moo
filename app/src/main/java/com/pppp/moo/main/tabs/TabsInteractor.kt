@@ -24,8 +24,8 @@ internal class TabsInteractor(
 
     override fun onAttach(nodeLifecycle: Lifecycle) {
         nodeLifecycle.createDestroy {
-            //bind(feature.news to rib.output using NewsToOutput)
-            //bind(rib.input to feature using InputToWish)
+            bind(feature.news to rib.output using NewsToOutput)
+            bind(rib.input to feature using InputToWish)
         }
     }
 

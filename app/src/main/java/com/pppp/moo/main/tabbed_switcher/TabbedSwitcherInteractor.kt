@@ -7,6 +7,7 @@ import com.badoo.mvicore.binder.using
 import com.badoo.ribs.core.Interactor
 import com.badoo.ribs.core.builder.BuildParams
 import com.badoo.ribs.core.routing.configuration.feature.BackStackFeature
+import com.badoo.ribs.core.routing.configuration.feature.operation.push
 import com.pppp.moo.main.tabbed_switcher.routing.TabbedSwitcherRouter.Configuration
 import com.pppp.moo.main.tabbed_switcher.analytics.TabbedSwitcherAnalytics
 import com.pppp.moo.main.tabbed_switcher.feature.TabbedSwitcherFeature
@@ -38,5 +39,6 @@ internal class TabbedSwitcherInteractor(
             bind(view to feature using ViewEventToWish)
             //bind(view to TabbedSwitcherAnalytics using ViewEventToAnalyticsEvent)
         }
+        backStack.push(Configuration.Foo)
     }
 }

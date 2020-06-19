@@ -2,6 +2,9 @@
 
 package com.pppp.moo.main.tabbed_switcher.builder
 
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProviders
 import com.badoo.ribs.core.builder.BuildParams
 import com.badoo.ribs.core.routing.configuration.feature.BackStackFeature
 import com.pppp.moo.main.tabbed_switcher.TabbedSwitcher
@@ -20,7 +23,7 @@ internal object TabbedSwitcherModule {
     @TabbedSwitcherScope
     @Provides
     @JvmStatic
-    internal fun feature(): TabbedSwitcherFeature = TabbedSwitcherFeature()
+    internal fun feature(activity: AppCompatActivity) = ViewModelProviders.of(activity).get(Store::class.java).feature
 
     @TabbedSwitcherScope
     @Provides
@@ -30,7 +33,7 @@ internal object TabbedSwitcherModule {
     ): BackStackFeature<Configuration> =
         BackStackFeature(
             buildParams = buildParams,
-            initialConfiguration = Configuration.Permanent
+            initialConfiguration = Configuration.Default
         )
 
     @TabbedSwitcherScope
@@ -87,4 +90,13 @@ internal object TabbedSwitcherModule {
         viewFactory = customisation.viewFactory(null),
         plugins = listOf(interactor, router)
     )
+
+    class Store : ViewModel() {
+        val feature: TabbedSwitcherFeature
+
+        init {
+            feature = TabbedSwitcherFeature()
+        }
+
+    }
 }

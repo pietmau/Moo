@@ -58,3 +58,11 @@ Bapp/src/main/java/com/pppp/moo/main/tabs/mapper/ViewEventToWish.kt,6/9/6942c81
 Mapp/src/main/java/com/pppp/moo/main/tabbed_switcher/mapper/ViewEventToWish.kt,c/c/cc7f0d1630a1fed53cab51e91829632d1e1b5a8f
 †
 Vapp/src/main/java/com/pppp/moo/main/tabbed_switcher/builder/TabbedSwitcherComponent.kt,7/2/72e32fdc683113d937b4c360eaa7c3d03e4e9aa7
+b
+2app/src/main/java/com/pppp/moo/main/pager/Pager.kt,d/e/de441948882c881750cb680a95d5e3bf083fa68a
+p
+@app/src/main/java/com/pppp/moo/main/pager/builder/PagerModule.kt,c/f/cf4ff85e5b730a5fcb4a9c09f0cfc64a32b084ad
+s
+Capp/src/main/java/com/pppp/moo/main/pager/builder/PagerComponent.kt,d/0/d090c7abaa0d6b806dacc501ece27dbe51bf78c5
+Š
+Zapp/src/main/java/com/pppp/moo/main/tabbed_switcher/routing/TabbedSwitcherChildBuilders.kt,a/f/afa27b1787e366194cd89669c6b8d8e0473e6ef5

@@ -19,6 +19,7 @@ internal interface TabbedSwitcherComponent {
     interface Factory {
         fun create(
             dependency: TabbedSwitcher.Dependency,
+            @BindsInstance activity: AppCompatActivity,
             @BindsInstance customisation: TabbedSwitcher.Customisation,
             @BindsInstance buildParams: BuildParams<TabbedSwitcherBuilder.Params>
         ): TabbedSwitcherComponent

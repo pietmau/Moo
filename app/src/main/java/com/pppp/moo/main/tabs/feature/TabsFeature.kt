@@ -32,6 +32,7 @@ internal class TabsFeature(timeCapsule: TimeCapsule<Parcelable>) : ActorReducerF
     sealed class Wish {
         object Initial : Wish()
         object Bar : Wish()
+        object Foo : Wish()
     }
 
     data class Effect(val data: String = "")

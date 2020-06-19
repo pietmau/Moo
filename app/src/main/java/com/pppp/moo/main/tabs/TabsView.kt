@@ -17,7 +17,10 @@ interface TabsView : RibView,
     ObservableSource<Event>,
     Consumer<ViewModel> {
 
-    sealed class Event
+    sealed class Event {
+        object Foo : Event()
+        object Bar : Event()
+    }
 
     data class ViewModel(
         val i: Int = 0
@@ -46,6 +49,8 @@ class TabsViewImpl private constructor(
     init {
         androidView.findViewById<BottomNavigationView>(R.id.bottom_nav).setOnNavigationItemReselectedListener { item ->
             when (item.itemId) {
+                R.id.foo -> events.accept(Event.Foo)
+                R.id.bar -> events.accept(Event.Bar)
             }
         }
     }
